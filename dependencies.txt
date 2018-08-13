@@ -1,6 +1,0 @@
-# Ubuntu
- - wmctrl
- - vim-gnome
-
-# Python
- - python2 -m pip install flake8
