@@ -8,7 +8,7 @@ from sniputil import bsnip
 ##########
 bsnip('setUpTestData', 'Django testing setUpTestData', r'''
 @classmethod
-def setUpTestData(cls)
+def setUpTestData(cls):
     super(${1:classname}, cls).setUpTestData()
     ${2:setup}
 ''', aliases=['setuptestdata'])
