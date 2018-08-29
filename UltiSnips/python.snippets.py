@@ -3,6 +3,21 @@
 
 from sniputil import bsnip
 
+##########
+# Django #
+##########
+bsnip('setUpTestData', 'Django testing setUpTestData', r'''
+@classmethod
+def setUpTestData(cls)
+    super(${1:classname}, cls).setUpTestData()
+    ${2:setup}
+''', aliases=['setuptestdata'])
+
+bsnip('setUp', 'Django testing setUp', r'''
+def setUp(self):
+    super(${1:class}, self).setUp()
+    ${2:setup}
+''')
 
 #############
 # MagicMock #
