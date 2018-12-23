@@ -2,6 +2,20 @@
 # vim:set fileencoding=utf8:
 
 from sniputil import bsnip
+from sniputil import wsnip
+
+###########
+# General #
+###########
+
+wsnip('lc', 'List comprehension', r'''
+[${1:x} for ${2:x} in ${3:iter}]
+''')
+
+bsnip('def', 'Define function', r'''
+def ${1:func_name}(${2:args}):
+    ${3:pass}
+''')
 
 ##########
 # Django #
@@ -19,6 +33,10 @@ def setUp(self):
     ${2:setup}
 ''')
 
+wsnip('filter', 'Django filter objects', r'''
+${1:model}.objects.filter(${2:fields})
+''')
+
 #############
 # MagicMock #
 #############
@@ -31,5 +49,5 @@ bsnip('patch', 'MagicMock @patch', r'''
 ###########
 bsnip('test', 'def test_...(self)', r'''
 def test_${1:funcname}(self):
-    pass
+    ${2:pass}
 ''', aliases=['t', 'tc'])
