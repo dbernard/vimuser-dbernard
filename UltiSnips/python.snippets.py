@@ -17,6 +17,12 @@ def ${1:func_name}(${2:args}):
     ${3:pass}
 ''')
 
+bsnip('class', 'Define a class', r'''
+class ${1:MyClass}(${2:inherits}):
+    def __init__(self, ${3:args}):
+        ${4:pass}
+''')
+
 ##########
 # Django #
 ##########
