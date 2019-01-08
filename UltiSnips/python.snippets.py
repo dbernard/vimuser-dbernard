@@ -57,3 +57,15 @@ bsnip('test', 'def test_...(self)', r'''
 def test_${1:funcname}(self):
     ${2:pass}
 ''', aliases=['t', 'tc'])
+
+bsnip('tabletest', 'def test_...(self)', r'''
+def test_${1:funcname}(self):
+    Case = namedtuple('Case', (${2:keys})
+
+    cases = [
+        ${3:cases}
+    ]
+
+    for case in self.tableTest(cases):
+        ${4:assert}
+''', aliases=['tt'])
